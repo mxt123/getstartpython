@@ -3,7 +3,10 @@ import random
 import os
 
 def start():
+    while game():
+        pass
 
+def game():
     os.system("clear")
     print "starship takeoff"
 
@@ -18,7 +21,7 @@ def start():
     force = 0
 
     while count_tries < tries and force != required_force :
-        print "enter force"
+        print "enter force" 
         force = int(raw_input("input force:"))
         if force < required_force:
             print "too low"
@@ -32,6 +35,12 @@ def start():
         print "you is winner!"
     else:
         print "you is looser :("
+
+    again = raw_input("again ?")
+    if again in ("y","Y"):
+        return again
+    else:
+        print "bye bye"
 
 if __name__ == '__main__':
     start()
