@@ -7,28 +7,28 @@ def start():
     os.system("clear")
     print "starship takeoff"
 
-    g = random.randint(1,2)
-    w = random.randint(1,2)
-    r = g * w
+    gravity = random.randint(1,2)
+    weight = random.randint(1,2)
+    required_force = gravity * weight
     tries = 3
 
-    print "gravity ", g
+    print "gravity ", gravity
 
     count_tries = 0 
     force = 0
 
-    while count_tries < tries and force != r:
-        print "enter force","r is ",r
+    while count_tries < tries and force != required_force :
+        print "enter force"
         force = int(raw_input("input force:"))
-        if force < r:
+        if force < required_force:
             print "too low"
-        elif force > r:
+        elif force > required_force:
             print "too high"
-        elif force == r:
+        elif force == required_force:
             print "that seems right"
         count_tries +=1
 
-    if r == force:
+    if required_force == force:
         print "you is winner!"
     else:
         print "you is looser :("
