@@ -88,7 +88,7 @@ def start():
     scores()
 
 def game():
-    dictionary = ["gnu","kernel","linux","mageia","penguin","ubuntu"]
+    dictionary = ["squirrel","cat","frog","dog","penguin","lion"]
     word = choice(dictionary)
     word_length = len(word)
     clue = word_length * ["_"]
